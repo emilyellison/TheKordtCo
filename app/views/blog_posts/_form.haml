@@ -1,12 +1,32 @@
-= render 'shared/error_messages', item: @blog_post
-= form_for @blog_post do |f|
-	= f.label :title
-	= f.text_field :title
-	= f.label :content
-	= f.text_area :content
-	= f.label :display, 'This post is ready for display.', class: 'inline'
-	= f.check_box :display, class: 'inline'
-	- if @blog_post.new_record?
-		= f.submit 'Create Blog Post', class: 'btn'
-	- else
-		= f.submit 'Update Blog Post', class: 'btn'
+.blog_post_form
+	= render 'shared/error_messages', item: @blog_post
+	= form_for @blog_post do |f|
+		= f.label :title
+		= f.text_field :title
+		= f.label :content
+		= f.text_area :content
+		= f.label :display, 'This post is ready for display.', class: 'inline'
+		= f.check_box :display, class: 'inline'
+		- if @blog_post.new_record?
+			= f.submit 'Create Blog Post', class: 'btn'
+		- else
+			= f.submit 'Update Blog Post', class: 'btn'
+.blog_post_instructions
+	%h2 Instructions
+	%p 
+		This form accepts Markdown flavored text. For more information on formatting using Markdown, visit:
+		= link_to 'Daring Fireball', 'http://daringfireball.net/projects/markdown/basics'
+	%hr
+	%p Your title is already formatted as a heading, but if you want another heading within your blog post, begin a line with a number sign (#):
+	%p # Another heading
+	%p to create text that looks like this:
+	%h1 Another heading
+	%hr
+	%p To get a smaller heading, type in:
+	%p ## A smaller heading
+	%p to get:
+	%h2 A smaller heading
+	%hr
+	%p For paragraphs, simply use block spacing, like this:
+	%p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consequat viverra ultrices. Sed aliquam malesuada quam nec vestibulum. Nullam lobortis magna ut mi viverra ultricies.
+	%p Nulla vehicula facilisis nisi a cursus. Donec at dapibus neque. Nunc blandit dolor sit amet justo fermentum vitae interdum arcu rhoncus. Nam tincidunt tempor dui, vitae condimentum sapien venenatis nec.
