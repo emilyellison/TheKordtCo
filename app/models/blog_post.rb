@@ -3,5 +3,7 @@ class BlogPost < ActiveRecord::Base
   
   validates :title, presence: true
   validates :content, presence: true
+  
+  scope :ready_for_display, where(display: true)
 
 end

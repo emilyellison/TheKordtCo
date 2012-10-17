@@ -3,7 +3,11 @@ class BlogPostsController < ApplicationController
   before_filter :redirect_if_not_admin, only: [ :new, :create, :edit, :update, :destroy ]
   
   def index
-    @blog_posts = BlogPost.limit(100)
+    if @current_user.admin?
+      @blog_posts = BlogPost.limit(100)
+    else
+      @blog_posts = BlogPost.ready_for_display.limit(100)
+    end
   end
   
   def new
