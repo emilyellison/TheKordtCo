@@ -3,4 +3,5 @@
 		%li= link_to 'The Kordt Co.', root_url
 	%ul.pull_right
 		- if current_user
+			%li= link_to 'Profile', user_url(@current_user)
 			%li= link_to 'Sign Out', sign_out_url
