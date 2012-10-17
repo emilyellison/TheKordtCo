@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121017193327) do
+ActiveRecord::Schema.define(:version => 20121017210239) do
 
   create_table "blog_posts", :force => true do |t|
     t.string   "title"
@@ -32,5 +32,14 @@ ActiveRecord::Schema.define(:version => 20121017193327) do
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+
+  create_table "videos", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "link"
+    t.boolean  "display",     :default => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+  end
 
 end
