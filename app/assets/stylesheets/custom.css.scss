@@ -11,6 +11,9 @@ body a {
 	background:ghostwhite;
 	min-height:850px;
 	box-shadow:0px 0px 30px black;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
 }
 nav {
 	padding:20px;
