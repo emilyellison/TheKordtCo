@@ -7,5 +7,6 @@ TheKordtCo::Application.routes.draw do
   get  '/sign_out' => 'sessions#destroy', as: :sign_out
   
   resources :users, only: [ :show ]
+  resources :blog_posts
 
 end

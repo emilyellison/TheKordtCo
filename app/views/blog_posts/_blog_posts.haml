@@ -1,0 +1,13 @@
+%ul.blog_posts
+	- @blog_posts.each do |blog_post|
+		%li
+			%p= link_to blog_post.title, blog_post_url(blog_post)
+			%p
+				Written on 
+				= blog_post.updated_at.strftime('%B %e, %Y')
+			- if @current_user && @current_user.admin == true
+				%p
+					= link_to 'Edit', edit_blog_post_url(blog_post)
+					|
+					= link_to 'Delete', blog_post_url(blog_post), method: :delete, data: { confirm: 'Are you sure you want to destroy this blog post?' }
+		%hr

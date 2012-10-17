@@ -1,0 +1,12 @@
+= render 'shared/error_messages', item: @blog_post
+= form_for @blog_post do |f|
+	= f.label :title
+	= f.text_field :title
+	= f.label :content
+	= f.text_area :content
+	= f.label :display, 'This post is ready for display.', class: 'inline'
+	= f.check_box :display, class: 'inline'
+	- if @blog_post.new_record?
+		= f.submit 'Create Blog Post', class: 'btn'
+	- else
+		= f.submit 'Update Blog Post', class: 'btn'

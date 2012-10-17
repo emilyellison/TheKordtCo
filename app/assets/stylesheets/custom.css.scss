@@ -64,20 +64,52 @@ h1 {
 	font-size:25px;
 	padding:10px 0px;
 }
+h1 a.btn, h2 a.btn {
+	float:right;
+	font-size:20px;
+	padding:5px;
+	border:1px solid blue;
+	background:royalblue;
+	color:white;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	text-shadow:0px 0px 5px black;
+	box-shadow:0px 0px 2px black;
+}
+h1 a.btn:hover, h2 a.btn:hover {
+	background:blue;
+}
+h2 {
+	font-size:22px;
+	padding:10px 0px;
+}
 p {
 	padding:10px 0px;
 }
-form label, input {
+form label, input, textarea {
 	display:block;
 	margin:10px 0px;
 	font-family:'Carrois Gothic';
 	font-size:16px;
 }
-form input {
+form input, textarea {
 	padding:3px;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border:1px solid grey;
+	box-shadow:1px 1px 2px grey;
+}
+form input.inline {
+	margin-left:10px;
+}
+form input.inline, label.inline {
+	display:inline;
 }
 form input.btn {
-	padding:5px 10px;
+	margin-top:20px;
+	padding:10px;
 	border:1px solid blue;
 	background:royalblue;
 	color:white;
@@ -89,4 +121,22 @@ form input.btn {
 }
 form input.btn:hover {
 	background:blue;
+}
+.form_error {
+	padding:10px 10px;
+	border:1px solid red;
+	background:pink;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+.form_error ul {
+	padding-left:20px;
+	list-style-type:circle;
+}
+ul.blog_posts li {
+	padding:10px 0px;
+}
+ul.blog_posts li p {
+	padding:5px 0px;
 }

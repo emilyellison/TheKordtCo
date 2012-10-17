@@ -1,0 +1,7 @@
+%h1= @blog_post.title
+= @blog_post.content
+- if @current_user && @current_user.admin == true
+	%p
+		= link_to 'Edit', edit_blog_post_url(@blog_post)
+		|
+		= link_to 'Delete', blog_post_url(@blog_post), method: :delete, data: { confirm: 'Are you sure you want to destroy this blog post?' }

@@ -21,9 +21,9 @@ class ApplicationController < ActionController::Base
   end
   
   def redirect_if_not_admin
-    if current_user.admin == false
-      flash[:error] = 'You are not authorized to perform that action.'
-      redirect_to :back
+    if current_user.nil? || current_user.admin == false
+      flash[:error] = 'You were not authorized to perform that action.'
+      redirect_to root_url
     end
   end
   
