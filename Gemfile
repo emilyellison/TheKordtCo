@@ -4,6 +4,7 @@ gem 'rails', '3.2.6'
 gem 'thin'
 gem 'haml'
 gem 'sass'
+gem 'redcarpet'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
