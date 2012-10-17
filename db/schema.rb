@@ -37,6 +37,9 @@ ActiveRecord::Schema.define(:version => 20121017210239) do
     t.string   "title"
     t.text     "description"
     t.string   "link"
+    t.boolean  "writer",      :default => false
+    t.boolean  "director",    :default => false
+    t.boolean  "producer",    :default => false
     t.boolean  "display",     :default => false
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
