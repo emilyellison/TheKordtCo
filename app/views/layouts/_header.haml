@@ -1,0 +1,4 @@
+%ul
+	%li= link_to 'Home', root_url
+	- if current_user
+		%li= link_to 'Sign Out', sign_out_url
