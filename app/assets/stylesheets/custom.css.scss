@@ -1,16 +1,17 @@
 body {
 	width:960px;
 	margin:20px auto;
-	background:-webkit-radial-gradient(slategrey,lightslategrey);
+	background:url('http://subtlepatterns.com/patterns/whitey.png');
 	font-family:'Carrois Gothic';
 }
 body a {
 	text-decoration:none;
 }
 .container {
-	background:ghostwhite;
+	background:#F9FAFA;
 	min-height:870px;
-	box-shadow:0px 0px 30px black;
+	box-shadow:0px 0px 50px grey;
+	border:1px solid grey;
 	border-radius:4px;
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
@@ -83,10 +84,12 @@ h1 a.btn:hover, h2 a.btn:hover {
 }
 h2 {
 	font-size:22px;
-	padding:10px 0px;
+	padding:10px 0px 0px;
+	line-height:32px;
 }
 p {
-	padding:10px 0px;
+	font-size:16px;
+	line-height:26px;
 }
 iframe {
 	margin:10px 0px 20px;
@@ -162,7 +165,7 @@ ul.content {
 	margin-left:-20px;
 }
 ul.content li p {
-	padding:5px 0px;
+	padding:0px 0px;
 }
 iframe {
 	box-shadow:1px 1px 4px black;
@@ -183,4 +186,18 @@ div.video_scroll span.video_frame p {
 	text-align:center;
 	margin:0px 0px 7px;
 }
-
+span.draft {
+	color:red;
+	border:2px dashed red;
+	padding:5px 5px 3px;
+	font-weight:bold;
+	font-size:12px;
+	margin-left:5px;
+}
+h1 span.draft {
+	position:absolute;
+}
+h2 span.draft {
+	position:relative;
+	bottom:3px;
+}

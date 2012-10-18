@@ -1,6 +1,9 @@
 class BlogPostsController < ApplicationController
   
   before_filter :redirect_if_not_admin, only: [ :new, :create, :edit, :update, :destroy ]
+  before_filter :only => [ :show ] do |action|
+    redirect_if_not_authorized(BlogPost.find(params[:id]))
+  end
   
   def index
     if @current_user.present? && @current_user.admin == true

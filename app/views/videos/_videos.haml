@@ -2,6 +2,9 @@
 	- videos.each do |video|
 		%span.video_frame
 			%iframe{ src: video.vimeo, width: 200, height: 121, frameborder: 0, webkitAllowFullScreen: true, mozallowfullscreen: true, allowFullScreen: true }
-			%p.video_title= link_to video.title, producer_url(id: video.id)
+			%p.video_title
+				= link_to video.title, producer_url(id: video.id)
+				- if video.display == false
+					%span.draft DRAFT
 %iframe{ src: @video.vimeo, width: 920, height: 558, frameborder: 0, webkitAllowFullScreen: true, mozallowfullscreen: true, allowFullScreen: true }
 = convert_to_markdown(@video.description)

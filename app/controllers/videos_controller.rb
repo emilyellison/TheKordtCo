@@ -49,7 +49,7 @@ class VideosController < ApplicationController
     @video = Video.new(params[:video])
     if @video.save
       flash[:success] = 'Your video has been created.'
-      redirect_to video_url(@video)
+      redirect_to user_url(@current_user)
     else
       render :new
     end
@@ -62,8 +62,8 @@ class VideosController < ApplicationController
   def update
     @video = Video.find(params[:id])
     if @video.update_attributes(params[:video])
-      flash[:success] = 'Your video has been created.'
-      redirect_to video_url(@video)
+      flash[:success] = 'Your video has been updated.'
+      redirect_to user_url(@current_user)
     else
       render :edit
     end

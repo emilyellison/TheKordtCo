@@ -1,7 +1,10 @@
 %ul.content
 	- @videos.each do |video|
 		%li
-			%p= link_to video.title, video_url(video)
+			%p
+				= link_to video.title, video_url(video)
+				- if video.display == false
+					%span.draft DRAFT
 			%p
 				Posted on
 				= video.updated_at.strftime('%B %e, %Y')
