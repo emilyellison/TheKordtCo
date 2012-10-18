@@ -1,0 +1,12 @@
+%ul.content
+	- @videos.each do |video|
+		%li
+			%p= link_to video.title, video_url(video)
+			%p
+				Posted on
+				= video.updated_at.strftime('%B %e, %Y')
+			%p
+				= link_to 'Edit', edit_video_url(video)
+				|
+				= link_to 'Delete', video_url(video), method: :delete, data: { confirm: 'Are you sure you want to destroy this video?' }
+		%hr

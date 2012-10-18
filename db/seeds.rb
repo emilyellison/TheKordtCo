@@ -8,6 +8,7 @@
 
 User.destroy_all
 BlogPost.destroy_all
+Video.destroy_all
 
 puts 'Old data destroyed.'
 
@@ -23,3 +24,11 @@ BlogPost.create(title: 'Kordt produces', content: 'Finished the final edits on t
 BlogPost.create(title: 'Kordt works', content: 'Just had coffee with Em, and we worked on our computers together. Such a good time!', display: false)
 
 puts 'Blog Posts created.'
+
+Video.create(title: 'GitSetGo', link: 'http://vimeo.com/46240886', description: 'This is Emily describing her GitSetGo website that she built.', writer: true, director: false, producer: true, display: true)
+Video.create(title: 'Cats in Tanks', link: 'http://vimeo.com/23608259', description: 'These are some cats in tanks.', writer: false, director: true, producer: true, display: true)
+Video.create(title: 'Young Kittens', link: 'http://vimeo.com/24801093', description: "They're just 4 1/2 weeks old!", writer: true, director: false, producer: true, display: true)
+Video.create(title: 'Cute Kittens', link: 'http://vimeo.com/1053647', description: "They're friends!", writer: true, director: false, producer: true, display: true)
+Video.create(title: 'Kittens Playing', link: 'http://vimeo.com/957065', description: "They're playing!", writer: true, director: false, producer: true, display: true)
+
+puts 'Videos created.'

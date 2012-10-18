@@ -1,0 +1,25 @@
+.content_form
+	= render 'shared/error_messages', item: @video
+	= form_for @video do |f|
+		= f.label :title
+		= f.text_field :title
+		= f.label :link, 'Hyperlink (e.g. http://vimeo.com/51254011)'
+		= f.text_field :link
+		= f.label :description
+		= f.text_area :description
+		= f.label :writer, 'I wrote this video.', class: 'inline'
+		= f.check_box :writer, class: 'inline'
+		%br
+		= f.label :director, 'I directed this video.', class: 'inline'
+		= f.check_box :director, class: 'inline'
+		%br
+		= f.label :producer, 'I produced this video.', class: 'inline'
+		= f.check_box :producer, class: 'inline'
+		%br
+		= f.label :display, 'This video is ready for display.', class: 'inline'
+		= f.check_box :display, class: 'inline'
+		- if @video.new_record?
+			= f.submit 'Create Video', class: 'btn'
+		- else
+			= f.submit 'Update Video', class: 'btn'
+= render 'shared/markdown_instructions'

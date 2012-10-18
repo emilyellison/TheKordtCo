@@ -1,6 +1,6 @@
 %h1= @blog_post.title
 = convert_to_markdown(@blog_post.content)
-- if @current_user && @current_user.admin == true
+- if @current_user.present? && @current_user.admin == true
 	%p
 		= link_to 'Edit', edit_blog_post_url(@blog_post)
 		|

@@ -7,6 +7,12 @@ TheKordtCo::Application.routes.draw do
   get  '/sign_out' => 'sessions#destroy', as: :sign_out
   
   resources :users, only: [ :show ]
-  resources :blog_posts
-
+  resources :blog_posts, except: [ :blog_posts ]
+  resources :videos, except: [ :index, :show ]
+  
+  get '/writer'   => 'videos#writer',   as: :writer
+  get '/director' => 'videos#director', as: :director
+  get '/producer' => 'videos#producer', as: :producer
+  get '/blogger' => 'blog_posts#index', as: :blog_posts
+  
 end

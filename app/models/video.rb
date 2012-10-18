@@ -4,8 +4,13 @@ class Video < ActiveRecord::Base
   validates :title, presence: true
   validates :link, presence: true
   
-  scope :write, where(write: true)
-  scope :direct, where(direct: true)
-  scope :produce, where(produce: true)
+  scope :written, where(writer: true)
+  scope :directed, where(director: true)
+  scope :produced, where(producer: true)
+  scope :ready_for_display, where(display: true)
+  
+  def vimeo
+    "http://player.vimeo.com/video/#{self.link.split('/').last.to_s}?title=1&amp;byline=1&amp;portrait=1"
+  end
   
 end

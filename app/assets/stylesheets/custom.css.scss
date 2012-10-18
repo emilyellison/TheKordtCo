@@ -9,7 +9,7 @@ body a {
 }
 .container {
 	background:ghostwhite;
-	min-height:850px;
+	min-height:870px;
 	box-shadow:0px 0px 30px black;
 	border-radius:4px;
 	-moz-border-radius:4px;
@@ -27,6 +27,7 @@ nav ul.pull_right {
 }
 nav ul.pull_right li {
 	padding-left:20px;
+	font-size:22px;
 }
 nav ul.pull_right li {
 	float:left;
@@ -87,6 +88,9 @@ h2 {
 p {
 	padding:10px 0px;
 }
+iframe {
+	margin:10px 0px 20px;
+}
 form label, input, textarea {
 	display:block;
 	margin:10px 0px;
@@ -134,16 +138,16 @@ form input.btn:hover {
 	padding-left:20px;
 	list-style-type:circle;
 }
-.blog_post_form {
+.content_form {
 	float:left;
 }
-.blog_post_form input, textarea {
-	width:320px;
+.content_form input, textarea {
+	width:300px;
 }
-.blog_post_form input.btn {
+.content_form input.btn {
 	width:auto;
 }
-.blog_post_instructions {
+.markdown_instructions {
 	float:right;
 	border:1px solid grey;
 	padding:10px;
@@ -154,9 +158,29 @@ form input.btn:hover {
 	background:white;
 	box-shadow:0px 0px 2px black;
 }
-ul.blog_posts li {
-	padding:10px 0px;
+ul.content {
+	margin-left:-20px;
 }
-ul.blog_posts li p {
+ul.content li p {
 	padding:5px 0px;
 }
+iframe {
+	box-shadow:1px 1px 4px black;
+}
+div.video_scroll {
+	width: 920px;
+	overflow-x:scroll;
+	overflow-y:hidden;
+	white-space:nowrap;
+}
+div.video_scroll span.video_frame {
+ 	display: inline-block;
+}
+div.video_scroll span.video_frame iframe {
+	margin:10px 10px 0px 3px;
+}
+div.video_scroll span.video_frame p {
+	text-align:center;
+	margin:0px 0px 7px;
+}
+

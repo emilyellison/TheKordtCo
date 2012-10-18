@@ -1,11 +1,12 @@
-%ul.blog_posts
+%ul.content
 	- @blog_posts.each do |blog_post|
 		%li
 			%p= link_to blog_post.title, blog_post_url(blog_post)
+			= convert_to_markdown(blog_post.content)
 			%p
 				Written on 
 				= blog_post.updated_at.strftime('%B %e, %Y')
-			- if @current_user && @current_user.admin == true
+			- if @current_user.present? && @current_user.admin == true
 				%p
 					= link_to 'Edit', edit_blog_post_url(blog_post)
 					|
