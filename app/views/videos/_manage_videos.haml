@@ -5,7 +5,7 @@
 				= link_to video.title, video_url(video)
 				- if video.display == false
 					%span.draft DRAFT
-			%p
+			%p.date
 				Posted on
 				= video.updated_at.strftime('%B %e, %Y')
 			%p

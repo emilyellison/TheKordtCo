@@ -1,7 +1,7 @@
 $black:#333;
-$blue1:#005F6B;
-$blue2:#008C9E;
-$blue3:#00B4CC;
+$darkblue:#003D7A;
+$blue:#006EDB;
+$orange:darkorange;
 $blue4:#00DFFC;
 body {
 	width:960px;
@@ -21,6 +21,9 @@ body a {
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
 }
+header {
+	height:60px;
+}
 nav {
 	padding:20px;
 	font-size:30px;
@@ -39,11 +42,11 @@ nav ul.pull_right li {
 	float:left;
 }
 nav ul li a {
-	color:$blue2;
+	color:$blue;
 	text-shadow:1px 1px 2px black;
 }
 nav ul li a:hover {
-	color:$blue3;
+	color:$orange;
 }
 .flash {
 	padding:10px 10px;
@@ -75,10 +78,10 @@ h1 {
 	padding:10px 0px;
 }
 h1 a, h2 a, p a {
-	color:$blue2;
+	color:$blue;
 }
 h1 a:hover, h2 a:hover, p a:hover {
-	color:$blue3;
+	color:$orange;
 }
 h2 {
 	font-size:22px;
@@ -88,8 +91,8 @@ h2 {
 h1 a.btn, h2 a.btn {
 	float:right;
 	font-size:16px;
-	border:1px solid $blue1;
-	background:$blue3;
+	border:1px solid $darkblue;
+	background:$orange;
 	color:white;
 	border-radius:4px;
 	-moz-border-radius:4px;
@@ -104,7 +107,7 @@ h2 a.btn {
 	padding:0px 5px;
 }
 h1 a.btn:hover, h2 a.btn:hover {
-	background:$blue2;
+	background:$blue;
 	box-shadow:0px 0px 3px black inset;
 }
 hr {
@@ -114,6 +117,10 @@ p {
 	font-size:16px;
 	line-height:26px;
 	padding:10px 0px;
+}
+p.date {
+	font-weight:bold;
+	color:grey;
 }
 iframe {
 	margin:10px 0px 20px;
@@ -141,8 +148,8 @@ form input.inline, label.inline {
 form input.btn {
 	margin-top:20px;
 	padding:10px;
-	border:1px solid $blue1;
-	background:$blue3;
+	border:1px solid $darkblue;
+	background:$blue;
 	color:white;
 	border-radius:4px;
 	-moz-border-radius:4px;
@@ -151,7 +158,7 @@ form input.btn {
 	box-shadow:0px 0px 2px black;
 }
 form input.btn:hover {
-	background:$blue2;
+	background:$orange;
 	box-shadow:0px 0px 3px black inset;
 }
 .form_error {

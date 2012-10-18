@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
   end
   
   def redirect_if_not_authorized(object)
-    if current_user.admin == false && object.display == false
+    if (current_user.nil? || current_user.admin == false) && object.display == false
       flash[:error] = 'You were not authorized to perform that action.'
       redirect_to root_url
     end

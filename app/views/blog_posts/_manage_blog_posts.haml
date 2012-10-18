@@ -6,7 +6,7 @@
 				- if blog_post.display == false
 					%span.draft DRAFT
 			= convert_to_markdown(blog_post.content)
-			%p
+			%p.date
 				Written on 
 				= blog_post.updated_at.strftime('%B %e, %Y')
 			- if @current_user.present? && @current_user.admin == true
