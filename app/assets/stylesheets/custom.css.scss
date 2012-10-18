@@ -75,7 +75,7 @@ h1, h2, p, input, label, textarea {
 }
 h1 {
 	font-size:25px;
-	padding:10px 0px;
+	padding:10px 0px 20px;
 }
 h1 a, h2 a, p a {
 	color:$blue;
@@ -235,4 +235,8 @@ h2 span.draft {
 }
 footer {
 	padding:20px 0px 0px;
+}
+img.home_page_photo {
+	box-shadow:1px 1px 4px black;
+	margin:0px 10px;
 }

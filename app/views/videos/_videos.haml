@@ -7,6 +7,7 @@
 				- if video.display == false
 					%span.draft DRAFT
 %iframe{ src: @video.vimeo, width: 920, height: 558, frameborder: 0, webkitAllowFullScreen: true, mozallowfullscreen: true, allowFullScreen: true }
+%h2= @video.title
 = convert_to_markdown(@video.description)
 %p.date
 	Posted on
