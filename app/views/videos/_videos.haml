@@ -8,3 +8,6 @@
 					%span.draft DRAFT
 %iframe{ src: @video.vimeo, width: 920, height: 558, frameborder: 0, webkitAllowFullScreen: true, mozallowfullscreen: true, allowFullScreen: true }
 = convert_to_markdown(@video.description)
+%p
+	Posted on
+	= @video.updated_at.strftime('%B %e, %Y')

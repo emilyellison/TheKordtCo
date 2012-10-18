@@ -1,11 +1,12 @@
-%nav
-	%ul.pull_left
-		%li= link_to 'The Kordt Co.', root_url
-	%ul.pull_right
-		%li= link_to 'Writer', writer_url
-		%li= link_to 'Director', director_url
-		%li= link_to 'Producer', producer_url
-		%li= link_to 'Blogger', blog_posts_url
-		- if current_user
-			%li= link_to 'Profile', user_url(@current_user)
-			%li= link_to 'Sign Out', sign_out_url
+%header
+	%nav
+		%ul.pull_left
+			%li= link_to 'The Kordt Co.', root_url
+		%ul.pull_right
+			%li= link_to 'Writer', writer_url
+			%li= link_to 'Director', director_url
+			%li= link_to 'Producer', producer_url
+			%li= link_to 'Blogger', blog_posts_url
+			- if current_user
+				%li= link_to 'Profile', user_url(@current_user)
+				%li= link_to 'Sign Out', sign_out_url

@@ -1,3 +1,8 @@
+$black:#333;
+$blue1:#005F6B;
+$blue2:#008C9E;
+$blue3:#00B4CC;
+$blue4:#00DFFC;
 body {
 	width:960px;
 	margin:20px auto;
@@ -34,11 +39,11 @@ nav ul.pull_right li {
 	float:left;
 }
 nav ul li a {
-	color:royalblue;
+	color:$blue2;
 	text-shadow:1px 1px 2px black;
 }
 nav ul li a:hover {
-	color:blue;
+	color:$blue3;
 }
 .flash {
 	padding:10px 10px;
@@ -62,16 +67,29 @@ nav ul li a:hover {
 .content {
 	padding:20px;
 }
+h1, h2, p, input, label, textarea {
+	color:#333;
+}
 h1 {
 	font-size:25px;
 	padding:10px 0px;
 }
+h1 a, h2 a, p a {
+	color:$blue2;
+}
+h1 a:hover, h2 a:hover, p a:hover {
+	color:$blue3;
+}
+h2 {
+	font-size:22px;
+	padding:10px 0px 0px;
+	line-height:32px;
+}
 h1 a.btn, h2 a.btn {
 	float:right;
-	font-size:20px;
-	padding:5px 10px;
-	border:1px solid blue;
-	background:royalblue;
+	font-size:16px;
+	border:1px solid $blue1;
+	background:$blue3;
 	color:white;
 	border-radius:4px;
 	-moz-border-radius:4px;
@@ -79,17 +97,23 @@ h1 a.btn, h2 a.btn {
 	text-shadow:0px 0px 5px black;
 	box-shadow:0px 0px 2px black;
 }
-h1 a.btn:hover, h2 a.btn:hover {
-	background:blue;
+h1 a.btn {
+	padding:5px 5px;
 }
-h2 {
-	font-size:22px;
-	padding:10px 0px 0px;
-	line-height:32px;
+h2 a.btn {
+	padding:0px 5px;
+}
+h1 a.btn:hover, h2 a.btn:hover {
+	background:$blue2;
+	box-shadow:0px 0px 3px black inset;
+}
+hr {
+	border:1px solid lightgrey;
 }
 p {
 	font-size:16px;
 	line-height:26px;
+	padding:10px 0px;
 }
 iframe {
 	margin:10px 0px 20px;
@@ -117,8 +141,8 @@ form input.inline, label.inline {
 form input.btn {
 	margin-top:20px;
 	padding:10px;
-	border:1px solid blue;
-	background:royalblue;
+	border:1px solid $blue1;
+	background:$blue3;
 	color:white;
 	border-radius:4px;
 	-moz-border-radius:4px;
@@ -127,7 +151,8 @@ form input.btn {
 	box-shadow:0px 0px 2px black;
 }
 form input.btn:hover {
-	background:blue;
+	background:$blue2;
+	box-shadow:0px 0px 3px black inset;
 }
 .form_error {
 	padding:10px 10px;
@@ -200,4 +225,7 @@ h1 span.draft {
 h2 span.draft {
 	position:relative;
 	bottom:3px;
+}
+footer {
+	padding:20px 0px 0px;
 }

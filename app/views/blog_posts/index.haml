@@ -1,5 +1,3 @@
 %h1 
 	Kordt Blogs
-	- if @current_user.present? && @current_user.admin == true
-		= link_to '+ Create Blog Post', new_blog_post_url, class: 'btn'
 = render 'blog_posts/blog_posts'

@@ -1,5 +1,3 @@
 %h1
 	Kordt Directs
-	- if @current_user.present? && @current_user.admin == true
-		= link_to '+ Create Video', new_video_url, class: 'btn'
 = render 'videos/videos', videos: @videos
