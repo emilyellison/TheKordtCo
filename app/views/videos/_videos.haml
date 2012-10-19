@@ -3,7 +3,12 @@
 		%span.video_frame
 			%iframe{ src: video.vimeo, width: 200, height: 121, frameborder: 0, webkitAllowFullScreen: true, mozallowfullscreen: true, allowFullScreen: true }
 			%p.video_title
-				= link_to video.title, producer_url(id: video.id)
+				- if @current_location == 'videos#writer'
+					= link_to video.title, writer_url(id: video.id)
+				- if @current_location == 'videos#director'
+					= link_to video.title, director_url(id: video.id)
+				- if @current_location == 'videos#producer'
+					= link_to video.title, producer_url(id: video.id)
 				- if video.display == false
 					%span.draft DRAFT
 %iframe{ src: @video.vimeo, width: 920, height: 558, frameborder: 0, webkitAllowFullScreen: true, mozallowfullscreen: true, allowFullScreen: true }
