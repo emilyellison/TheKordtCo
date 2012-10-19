@@ -92,7 +92,7 @@ h1 a.btn, h2 a.btn {
 	float:right;
 	font-size:16px;
 	border:1px solid $darkblue;
-	background:$orange;
+	background:$blue;
 	color:white;
 	border-radius:4px;
 	-moz-border-radius:4px;
@@ -107,7 +107,7 @@ h2 a.btn {
 	padding:0px 5px;
 }
 h1 a.btn:hover, h2 a.btn:hover {
-	background:$blue;
+	background:$darkblue;
 	box-shadow:0px 0px 3px black inset;
 }
 hr {
@@ -127,7 +127,7 @@ iframe {
 }
 form label, input, textarea {
 	display:block;
-	margin:10px 0px;
+	margin:8px 0px;
 	font-family:'Carrois Gothic';
 	font-size:16px;
 }
@@ -146,7 +146,7 @@ form input.inline, label.inline {
 	display:inline;
 }
 form input.btn {
-	margin-top:20px;
+	margin-top:10px;
 	padding:10px;
 	border:1px solid $darkblue;
 	background:$blue;
@@ -158,7 +158,7 @@ form input.btn {
 	box-shadow:0px 0px 2px black;
 }
 form input.btn:hover {
-	background:$orange;
+	background:$darkblue;
 	box-shadow:0px 0px 3px black inset;
 }
 .form_error {
@@ -175,23 +175,35 @@ form input.btn:hover {
 }
 .content_form {
 	float:left;
+	width:490px;
 }
 .content_form input, textarea {
-	width:300px;
+	width:450px;
 }
 .content_form input.btn {
 	width:auto;
 }
+.content_form input.inline {
+	width:auto;
+}
 .markdown_instructions {
-	float:right;
+	float:left;
 	border:1px solid grey;
 	padding:10px;
-	width:370px;
+	width:400px;
+	height:690px;
 	border-radius:4px;
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
 	background:white;
 	box-shadow:0px 0px 2px black;
+}
+.markdown_instructions p {
+	font-size:16px;
+	padding:5px 0px;
+}
+.markdown_instructions h1, h2 {
+	padding:3px 0px;
 }
 ul.content {
 	margin-left:-20px;
