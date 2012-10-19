@@ -1,0 +1,15 @@
+%ul.content
+	- @contents.each do |content|
+		%li
+			%p
+				Page:
+				= content.page
+			%p
+				Element:
+				= content.element
+			%p
+				Content:
+				= content.description
+			%p
+				= link_to 'Edit', edit_content_url(content)
+		%hr

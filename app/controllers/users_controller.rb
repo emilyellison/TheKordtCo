@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @blog_posts = BlogPost.limit(100)
     @videos = Video.limit(100)
+    @contents = Content.limit(100)
   end
   
 end

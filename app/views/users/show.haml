@@ -1,4 +1,7 @@
 %h1= @user.full_name
+%h2
+	Manage Contents
+= render 'contents/manage_contents'
 %h2 
 	Manage Videos
 	= link_to '+ Video', new_video_url, class: 'btn'

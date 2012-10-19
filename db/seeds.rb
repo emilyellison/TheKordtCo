@@ -9,6 +9,7 @@
 User.destroy_all
 BlogPost.destroy_all
 Video.destroy_all
+Content.destroy_all
 
 puts 'Old data destroyed.'
 
@@ -48,13 +49,15 @@ Video.create(title: 'Kittens Playing', link: 'http://vimeo.com/957065', descript
 
 puts 'Videos created.'
 
-Content.create(page: 'The Kordt Co.', element: 'Heading', content: 'Today, more people than ever are being tasked to create a video for their company or organization. Where do you start? Ask Kordt.')
-Content.create(page: 'The Kordt Co.', element: 'Picture_1', content: 'http://www.sxc.hu/pic/m/t/tp/tpacific/644739_studio_light.jpg')
-Content.create(page: 'The Kordt Co.', element: 'Picture_2', content: 'http://www.sxc.hu/pic/m/l/le/leosynapse/381410_news_camera.jpg')
-Content.create(page: 'The Kordt Co.', element: 'Picture_3', content: 'http://www.sxc.hu/pic/m/g/ge/geryy/507477_photo_film.jpg')
-Content.create(page: 'The Kordt Co.', element: 'Content', content: 'Whether you’re creating your first video or you’ve created hundreds, your video will shine according to how well you plan it. That’s where scripting comes in.
-Do you want your video to be charming and engaging? Witty and thought-provoking? Exciting and music-driven? Hard-hitting and compelling? Whatever style you’re after, I can help you achieve it.
-And what about your video’s content? Will it be voice-over driven? Will there be interviews? Charts and graphs? Animation and graphics? I can help make sure that your content is presented in the most understandable and interesting ways.
-Is your subject technical? I’ve written videos on everything from insects that plague cotton farmers to emerging financial markets, from the technical highlights of new equipment to marketing and merchandising techniques for store employees.')
+Content.create(page: 'The Kordt Co.', element: 'Top Text', description: '# Today, more people than ever are being tasked to create a video for their company or organization. Where do you start? Ask Kordt.')
+Content.create(page: 'The Kordt Co.', element: 'Picture_1', description: 'http://www.sxc.hu/pic/m/t/tp/tpacific/644739_studio_light.jpg')
+Content.create(page: 'The Kordt Co.', element: 'Picture_2', description: 'http://www.sxc.hu/pic/m/l/le/leosynapse/381410_news_camera.jpg')
+Content.create(page: 'The Kordt Co.', element: 'Picture_3', description: 'http://www.sxc.hu/pic/m/g/ge/geryy/507477_photo_film.jpg')
+Content.create(page: 'The Kordt Co.', element: 'Bottom Text', description: "Whether you're creating your first video or you've created hundreds, your video will shine according to how well you plan it. That's where scripting comes in.
+
+Do you want your video to be charming and engaging? Witty and thought-provoking? Exciting and music-driven? Hard-hitting and compelling? Whatever style you're after, I can help you achieve it.
+And what about your video's content? Will it be voice-over driven? Will there be interviews? Charts and graphs? Animation and graphics? I can help make sure that your content is presented in the most understandable and interesting ways.
+
+Is your subject technical? I've written videos on everything from insects that plague cotton farmers to emerging financial markets, from the technical highlights of new equipment to marketing and merchandising techniques for store employees.")
 
 puts 'Content created.'

@@ -3,7 +3,7 @@ class CreateContents < ActiveRecord::Migration
     create_table :contents do |t|
       t.string :page
       t.string :element
-      t.text :content
+      t.text :description
 
       t.timestamps
     end
