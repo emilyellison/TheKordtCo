@@ -50,14 +50,34 @@ Video.create(title: 'Kittens Playing', link: 'http://vimeo.com/957065', descript
 puts 'Videos created.'
 
 Content.create(page: 'The Kordt Co.', element: 'Top Text', description: '# Today, more people than ever are being tasked to create a video for their company or organization. Where do you start? Ask Kordt.')
-Content.create(page: 'The Kordt Co.', element: 'Picture_1', description: 'http://www.sxc.hu/pic/m/t/tp/tpacific/644739_studio_light.jpg')
-Content.create(page: 'The Kordt Co.', element: 'Picture_2', description: 'http://www.sxc.hu/pic/m/l/le/leosynapse/381410_news_camera.jpg')
-Content.create(page: 'The Kordt Co.', element: 'Picture_3', description: 'http://www.sxc.hu/pic/m/g/ge/geryy/507477_photo_film.jpg')
+Content.create(page: 'The Kordt Co.', element: 'Picture 1', description: 'http://www.sxc.hu/pic/m/t/tp/tpacific/644739_studio_light.jpg')
+Content.create(page: 'The Kordt Co.', element: 'Picture 2', description: 'http://www.sxc.hu/pic/m/l/le/leosynapse/381410_news_camera.jpg')
+Content.create(page: 'The Kordt Co.', element: 'Picture 3', description: 'http://www.sxc.hu/pic/m/g/ge/geryy/507477_photo_film.jpg')
 Content.create(page: 'The Kordt Co.', element: 'Bottom Text', description: "Whether you're creating your first video or you've created hundreds, your video will shine according to how well you plan it. That's where scripting comes in.
 
 Do you want your video to be charming and engaging? Witty and thought-provoking? Exciting and music-driven? Hard-hitting and compelling? Whatever style you're after, I can help you achieve it.
 And what about your video's content? Will it be voice-over driven? Will there be interviews? Charts and graphs? Animation and graphics? I can help make sure that your content is presented in the most understandable and interesting ways.
 
 Is your subject technical? I've written videos on everything from insects that plague cotton farmers to emerging financial markets, from the technical highlights of new equipment to marketing and merchandising techniques for store employees.")
+
+Content.create(page: 'Writer', element: 'Heading', description: '# Kordt Writes')
+Content.create(page: 'Director', element: 'Heading', description: '# Kordt Directs')
+Content.create(page: 'Producer', element: 'Heading', description: '# Kordt Produces')
+Content.create(page: 'Blogger', element: 'Heading', description: '# Kordt Blogs')
+Content.create(page: 'Hire', element: 'Heading', description: '# Kordt Works')
+Content.create(page: 'Hire', element: 'Pitch', description: "If you are looking for fresh ideas, helpful planning and great scripting, the process can be simple. Tell me what's on your mind, and together, we can make your next video your best video.")
+Content.create(page: 'Hire', element: 'Contact Info Heading', description: 'Kordt Larsen')
+Content.create(page: 'Hire', element: 'Phone Picture', description: 'http://png-2.findicons.com/files/icons/1676/primo/128/telephone_black.png')
+Content.create(page: 'Hire', element: 'Phone Number', description: '(312) 217-4123')
+Content.create(page: 'Hire', element: 'E-mail Picture', description: 'http://png-4.findicons.com/files/icons/989/ivista_2/128/email.png')
+Content.create(page: 'Hire', element: 'E-mail Address', description: 'kordt@me.com')
+Content.create(page: 'Hire', element: 'Residence Picture', description: 'http://png-1.findicons.com/files/icons/242/the_real_christmas_05/128/house.png')
+Content.create(page: 'Hire', element: 'Residence', description: 'Chicago, IL')
+Content.create(page: 'Hire', element: 'Profile 1 Picture', description: 'http://png-3.findicons.com/files/icons/1983/aquaticus_social/60/vimeo.png')
+Content.create(page: 'Hire', element: 'Profile 1 Address', description: 'http://vimeo.com/kordtlarsen')
+Content.create(page: 'Hire', element: 'Profile 2 Picture', description: 'http://png-2.findicons.com/files/icons/2473/odern_web_social_icons/64/soundcloud.png')
+Content.create(page: 'Hire', element: 'Profile 2 Address', description: 'http://soundcloud.com/kordt')
+Content.create(page: 'Hire', element: 'Profile 3 Picture', description: 'http://png-5.findicons.com/files/icons/819/social_me/64/linkedin.png')
+Content.create(page: 'Hire', element: 'Profile 3 Address', description: 'http://www.linkedin.com/in/kordt')
 
 puts 'Content created.'

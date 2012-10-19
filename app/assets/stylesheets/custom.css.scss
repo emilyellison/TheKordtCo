@@ -179,8 +179,11 @@ form input.btn:hover {
 .content_form p {
 	padding:5px 0px;
 }
-.content_form input, textarea {
+.content_form form input {
 	width:450px;
+}
+.content_form form textarea {
+	width:446px;
 }
 .content_form input.btn {
 	width:auto;

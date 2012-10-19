@@ -1,22 +1,22 @@
-%h1 Kordt Works
+= convert_to_markdown(Content.description_for('Hire', 'Heading'))
 .hire_form
-	%p If you are looking for fresh ideas, helpful planning and great scripting, the process can be simple. Tell me what's on your mind, and together, we can make your next video your best video.
+	= convert_to_markdown(Content.description_for('Hire', 'Pitch'))
 	= render 'inquiries/form'
 .contact_info
 	%h2 Kordt Larsen
 	%p
-		= image_tag('http://png-2.findicons.com/files/icons/1676/primo/128/telephone_black.png', size: '30x30')
-		%a{href: "tel:3122174123"} (312) 217-4123
+		= image_tag(Content.description_for('Hire', 'Phone Picture'), size: '30x30')
+		%a{href: telephone_for(Content.description_for('Hire', 'Phone Number'))} (312) 217-4123
 	%p
-		= image_tag('http://png-4.findicons.com/files/icons/989/ivista_2/128/email.png', size: '30x30')
-		= mail_to 'kordt@me.com', 'kordt@me.com', subject: 'Hello'
+		= image_tag(Content.description_for('Hire', 'E-mail Picture'), size: '30x30')
+		= mail_to Content.description_for('Hire', 'E-mail Address'), Content.description_for('Hire', 'E-mail Address'), subject: 'Hello'
 	%p
-		= image_tag('http://png-1.findicons.com/files/icons/242/the_real_christmas_05/128/house.png', size: '30x30')
-		= link_to 'Chicago, IL', 'https://maps.google.com/maps?q=chicago+illinois+map&ie=UTF-8&hq=&hnear=0x880e2c3cd0f4cbed:0xafe0a6ad09c0c000,Chicago,+IL&gl=us&ei=JWQPUM-KM8_GqAHPxYCoCw&ved=0CAgQ8gEwAA'
+		= image_tag(Content.description_for('Hire', 'Residence Picture'), size: '30x30')
+		= link_to Content.description_for('Hire', 'Residence'), google_map(Content.description_for('Hire', 'Residence'))
 	%br
 	%h2 Profiles
-	= link_to image_tag('http://png-3.findicons.com/files/icons/1983/aquaticus_social/60/vimeo.png', size: '40x40'), 'http://vimeo.com/kordtlarsen'
-	= link_to image_tag('http://png-2.findicons.com/files/icons/2473/odern_web_social_icons/64/soundcloud.png', size: '40x40'), 'http://soundcloud.com/kordt'
-	= link_to image_tag('http://png-5.findicons.com/files/icons/819/social_me/64/linkedin.png', size: '40x40'), 'http://www.linkedin.com/in/kordt'
+	= link_to image_tag(Content.description_for('Hire', 'Profile 1 Picture'), size: '40x40'), Content.description_for('Hire', 'Profile 1 Address')
+	= link_to image_tag(Content.description_for('Hire', 'Profile 2 Picture'), size: '40x40'), Content.description_for('Hire', 'Profile 2 Address')
+	= link_to image_tag(Content.description_for('Hire', 'Profile 3 Picture'), size: '40x40'), Content.description_for('Hire', 'Profile 3 Address')
 	%br
 	%br
