@@ -1,0 +1,5 @@
+You have a message from:
+Name: <%= @inquiry.name %>
+E-mail: <%= @inquiry.email %>
+Message:
+<%= @inquiry.message %>
