@@ -21,9 +21,6 @@ body a {
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
 }
-header {
-	height:60px;
-}
 nav {
 	padding:20px;
 	font-size:30px;
@@ -47,14 +44,34 @@ nav ul li a {
 nav ul li a:hover {
 	color:$orange;
 }
-
+nav.admin {
+	border-top:1px solid darkblue;
+	border-bottom:1px solid darkblue;
+	position:relative;
+	margin-top:15px;
+	background:$blue;
+}
+nav.admin {
+	color:white;
+	text-shadow:0px 0px 5px black;
+}
+nav.admin a {
+	color:white;
+	text-shadow:0px 0px 5px black;
+}
+nav.admin ul {
+	position:relative;
+	bottom:7px;
+}
 nav.admin ul li {
-	font-size:20px;
-	padding:5px;
-	margin:0px 0px;
+	font-size:18px;
 }
 nav.admin ul.pull_left {
 	float:left;
+}
+nav.admin ul.pull_left li {
+	padding-left:0px;
+	margin:0px;
 }
 nav.admin ul.pull_right {
 	float:right;
@@ -64,7 +81,7 @@ nav.admin ul.pull_right li {
 }
 .flash {
 	padding:10px 10px;
-	margin:5px 20px -10px 20px;
+	margin:25px 20px -10px 20px;
 	border-radius:4px;
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
@@ -227,6 +244,7 @@ form input.btn:hover {
 }
 ul.content {
 	margin-left:-20px;
+	padding-top:0px;
 }
 ul.content li p {
 	padding:0px 0px;

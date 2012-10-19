@@ -10,10 +10,14 @@ class ContentsController < ApplicationController
     @content = Content.find(params[:id])
     if @content.update_attributes(params[:content])
       flash[:success] = 'Your content has been updated.'
-      redirect_to user_url(@current_user)
+      redirect_to manage_content_url
     else
       render :edit
     end
+  end
+  
+  def manage
+    @contents = Content.limit(100)
   end
   
 end

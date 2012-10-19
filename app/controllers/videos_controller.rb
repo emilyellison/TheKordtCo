@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
   
-  before_filter :redirect_if_not_admin, only: [ :new, :create, :edit, :update, :destroy ]
+  before_filter :redirect_if_not_admin, only: [ :new, :create, :edit, :update, :destroy, :manage ]
   
   def writer
     if @current_user.present? && @current_user.admin == true
@@ -49,7 +49,7 @@ class VideosController < ApplicationController
     @video = Video.new(params[:video])
     if @video.save
       flash[:success] = 'Your video has been created.'
-      redirect_to user_url(@current_user)
+      redirect_to manage_videos_url
     else
       render :new
     end
@@ -63,7 +63,7 @@ class VideosController < ApplicationController
     @video = Video.find(params[:id])
     if @video.update_attributes(params[:video])
       flash[:success] = 'Your video has been updated.'
-      redirect_to user_url(@current_user)
+      redirect_to manage_videos_url
     else
       render :edit
     end
@@ -73,7 +73,11 @@ class VideosController < ApplicationController
     @video = Video.find(params[:id])
     @video.destroy
     flash[:success] = 'Your video has been destroyed.'
-    redirect_to user_url(@current_user)
+    redirect_to manage_videos_url
+  end
+  
+  def manage
+    @videos = Video.limit(100)
   end
   
 end

@@ -1,6 +1,6 @@
 class BlogPostsController < ApplicationController
   
-  before_filter :redirect_if_not_admin, only: [ :new, :create, :edit, :update, :destroy ]
+  before_filter :redirect_if_not_admin, only: [ :new, :create, :edit, :update, :destroy, :manage ]
   before_filter :only => [ :show ] do |action|
     redirect_if_not_authorized(BlogPost.find(params[:id]))
   end
@@ -21,7 +21,7 @@ class BlogPostsController < ApplicationController
     @blog_post = BlogPost.new(params[:blog_post])
     if @blog_post.save
       flash[:success] = 'Your blog post has been created.'
-      redirect_to blog_post_url(@blog_post)
+      redirect_to manage_blog_posts_url
     else
       render :new
     end
@@ -39,7 +39,7 @@ class BlogPostsController < ApplicationController
     @blog_post = BlogPost.find(params[:id])
     if @blog_post.update_attributes(params[:blog_post])
       flash[:success] = 'Your blog post has been updated.'
-      redirect_to blog_post_url(@blog_post)
+      redirect_to manage_blog_posts_url
     else
       render :edit
     end
@@ -49,7 +49,11 @@ class BlogPostsController < ApplicationController
     @blog_post = BlogPost.find(params[:id])
     @blog_post.destroy
     flash[:success] = 'Your blog post has been destroyed'
-    redirect_to blog_posts_url
+    redirect_to manage_blog_posts_url
+  end
+  
+  def manage
+    @blog_posts = BlogPost.limit(100)
   end
   
 end

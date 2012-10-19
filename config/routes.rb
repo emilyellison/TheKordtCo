@@ -6,7 +6,6 @@ TheKordtCo::Application.routes.draw do
   post '/sign_in'  => 'sessions#create'
   get  '/sign_out' => 'sessions#destroy', as: :sign_out
   
-  resources :users, only: [ :show ]
   resources :blog_posts, except: [ :blog_posts ]
   resources :videos, except: [ :index, :show ]
   resources :contents, only: [ :edit, :update ]
@@ -16,5 +15,10 @@ TheKordtCo::Application.routes.draw do
   get '/director' => 'videos#director', as: :director
   get '/producer' => 'videos#producer', as: :producer
   get '/blogger' => 'blog_posts#index', as: :blog_posts
+  
+  get '/manage_content' => 'contents#manage', as: :manage_content
+  get '/manage_videos' => 'videos#manage', as: :manage_videos
+  get '/manage_blog_posts' => 'blog_posts#manage', as: :manage_blog_posts
+  
   
 end

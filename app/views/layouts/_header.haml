@@ -9,13 +9,12 @@
 			%li= link_to 'Blogger', blog_posts_url
 			%li= link_to 'Hire', new_inquiry_url
 	- if @current_user.present? && @current_user.admin?
-		%nav.admin
-			%ul.pull_left
-				%li= @current_user.full_name
-			%ul.pull_right
-				%li= link_to 'Manage Content', user_url(@current_user)
-				%li= link_to 'Manage Videos', user_url(@current_user)
-				%li= link_to 'Manage Blog Posts', user_url(@current_user)
-				%li= link_to 'Sign Out', sign_out_url
-- if @current_user.present? && @current_user.admin?
-	%br
+		.admin_wrapper
+			%nav.admin
+				%ul.pull_left
+					%li= @current_user.full_name
+				%ul.pull_right
+					%li= link_to 'Manage Content', manage_content_url
+					%li= link_to 'Manage Videos', manage_videos_url
+					%li= link_to 'Manage Blog Posts', manage_blog_posts_url
+					%li= link_to 'Sign Out', sign_out_url
