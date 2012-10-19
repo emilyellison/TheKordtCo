@@ -47,6 +47,21 @@ nav ul li a {
 nav ul li a:hover {
 	color:$orange;
 }
+
+nav.admin ul li {
+	font-size:20px;
+	padding:5px;
+	margin:0px 0px;
+}
+nav.admin ul.pull_left {
+	float:left;
+}
+nav.admin ul.pull_right {
+	float:right;
+}
+nav.admin ul.pull_right li {
+	padding-left:20px;
+}
 .flash {
 	padding:10px 10px;
 	margin:5px 20px -10px 20px;

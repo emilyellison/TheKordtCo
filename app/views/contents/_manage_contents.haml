@@ -9,7 +9,7 @@
 				= content.element
 			%p
 				Content:
-				= content.description
+				= convert_to_markdown content.description
 			- if content.description.end_with?('png') || content.description.end_with?('jpg') || content.description.end_with?('jpeg') || content.description.end_with?('gif') || content.description.end_with?('bmp')
 				%p= image_tag content.description, size: '50x50'
 			%p
