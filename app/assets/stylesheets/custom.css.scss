@@ -6,7 +6,6 @@ $blue4:#00DFFC;
 body {
 	width:960px;
 	margin:20px auto;
-	background:url('http://subtlepatterns.com/patterns/whitey.png');
 	font-family:'Carrois Gothic',arial,sans-serif;
 }
 body a {
@@ -153,6 +152,10 @@ p {
 p.date {
 	font-weight:bold;
 	color:grey;
+}
+p.edit_heading {
+	position:relative;
+	bottom:20px;
 }
 iframe {
 	margin:10px 0px 20px;

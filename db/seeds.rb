@@ -79,5 +79,6 @@ Content.create(page: 'Hire', element: 'Profile 2 Picture', description: 'http://
 Content.create(page: 'Hire', element: 'Profile 2 Address', description: 'http://soundcloud.com/kordt')
 Content.create(page: 'Hire', element: 'Profile 3 Picture', description: 'http://png-5.findicons.com/files/icons/819/social_me/64/linkedin.png')
 Content.create(page: 'Hire', element: 'Profile 3 Address', description: 'http://www.linkedin.com/in/kordt')
+Content.create(page: 'Settings', element: 'Background', description: 'http://subtlepatterns.com/patterns/whitey.png')
 
 puts 'Content created.'
