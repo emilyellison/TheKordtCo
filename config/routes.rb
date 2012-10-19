@@ -10,7 +10,7 @@ TheKordtCo::Application.routes.draw do
   resources :blog_posts, except: [ :blog_posts ]
   resources :videos, except: [ :index, :show ]
   resources :contents, only: [ :edit, :update ]
-  resources :inquiries, only: [ :index, :show, :new, :create ]
+  resources :inquiries, only: [ :new, :create ]
   
   get '/writer'   => 'videos#writer',   as: :writer
   get '/director' => 'videos#director', as: :director

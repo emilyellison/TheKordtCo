@@ -2,10 +2,6 @@ class InquiriesController < ApplicationController
   
   before_filter :redirect_if_not_admin, only: [ :index, :show ]
   
-  def index
-    @inquiries = Inquiry.limit(100)
-  end
-  
   def new
     @inquiry = Inquiry.new
   end
@@ -21,8 +17,4 @@ class InquiriesController < ApplicationController
     end
   end
   
-  def show
-    @inquiry = Inquiry.find(params[:id])
-  end
-
 end
