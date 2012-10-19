@@ -7,7 +7,7 @@ body {
 	width:960px;
 	margin:20px auto;
 	background:url('http://subtlepatterns.com/patterns/whitey.png');
-	font-family:'Carrois Gothic';
+	font-family:'Carrois Gothic',arial,sans-serif;
 }
 body a {
 	text-decoration:none;
@@ -253,4 +253,34 @@ footer {
 img.home_page_photo {
 	box-shadow:1px 1px 4px black;
 	margin:0px 10px;
+}
+.hire_form {
+	float:left;
+	width:500px;
+}
+.hire_form form input, textarea {
+	width:480px;
+}
+.hire_form form input.btn {
+	width:auto;
+}
+.contact_info {
+	float:left;
+	margin-left:20px;
+	width:350px;
+	padding:20px;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border:1px solid grey;
+	box-shadow:1px 1px 2px grey;
+	background:white;
+}
+.contact_info p {
+	padding:0px;
+}
+.contact_info img {
+	position:relative;
+	top:9px;
+	padding-right:10px;
 }

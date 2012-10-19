@@ -1,0 +1,13 @@
+.content_form
+	%p
+		Page:
+		= @content.page
+	%p
+		Element:
+		= @content.element
+	= render 'shared/error_messages', item: @content
+	= form_for @content do |f|
+		= f.label :description, 'Content'
+		= f.text_area :description
+		= f.submit 'Update Content', class: 'btn'
+= render 'shared/markdown_instructions'

@@ -7,6 +7,7 @@
 			%li= link_to 'Director', director_url
 			%li= link_to 'Producer', producer_url
 			%li= link_to 'Blogger', blog_posts_url
+			%li= link_to 'Hire', new_inquiry_url
 			- if current_user
-				%li= link_to 'Profile', user_url(@current_user)
+				%li= link_to 'Account', user_url(@current_user)
 				%li= link_to 'Sign Out', sign_out_url
