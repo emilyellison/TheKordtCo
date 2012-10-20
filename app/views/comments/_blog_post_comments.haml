@@ -1,0 +1,19 @@
+.comments
+	%h2 Comments
+	- if @blog_post.comments.count == 0
+		%p.no_comments There are no comments posted yet.
+	- else
+		- @blog_post.comments.each do |comment|
+			%p.commenter= comment.name
+			= convert_to_markdown(comment.message)
+			%p.date
+				Posted on
+				= comment.updated_at.strftime('%B %e, %Y')
+			%hr
+	%h2 Add Your Comment
+	= form_for [ @commentable, Comment.new ], url: blog_post_comments_url(blog_post_id: @blog_post.id) do |f|
+		= f.label :name
+		= f.text_field :name
+		= f.label :message
+		= f.text_area :message, rows: 5
+		= f.submit 'Comment', class: 'btn'

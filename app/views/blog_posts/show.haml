@@ -3,3 +3,4 @@
 	- if @blog_post.display == false
 		%span.draft DRAFT
 = convert_to_markdown(@blog_post.content)
+= render 'comments/blog_post_comments'
