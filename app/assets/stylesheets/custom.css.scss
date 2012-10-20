@@ -339,6 +339,9 @@ img.home_page_photo {
 .comments p.commenter {
 	font-weight:bold;
 }
+.comments form input, label, textarea {
+	font-family:'Carrois Gothic',arial, sans-serif;
+}
 .comments form input, textarea {
 	width:99%;
 }
