@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
   
+  before_filter :redirect_if_not_admin, only: [ :destroy ]
+  
   def create
     @commentable = find_commentable
     @comment = @commentable.comments.build(params[:comment])  
