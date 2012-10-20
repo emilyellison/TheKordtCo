@@ -1,6 +1,8 @@
 class Video < ActiveRecord::Base
   attr_accessible :description, :link, :title, :display, :writer, :director, :producer
   
+  has_many :comments, as: :commentable
+  
   validates :title, presence: true
   validates :link, presence: true
   
