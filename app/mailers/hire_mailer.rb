@@ -1,5 +1,5 @@
 class HireMailer < ActionMailer::Base
-  default to: "emily@fixitwithcode.com"
+  default to: "kordt@me.com"
   
   def hire_me(inquiry)
     @inquiry = inquiry
