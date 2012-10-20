@@ -327,3 +327,21 @@ img.home_page_photo {
 	top:9px;
 	padding-right:10px;
 }
+.comments h2 {
+	padding:20px 0px 10px;
+}
+.comments p {
+	padding:5px 0px;
+}
+.comments p.no_comments {
+	font-style:italic;
+}
+.comments p.commenter {
+	font-weight:bold;
+}
+.comments form input, textarea {
+	width:99%;
+}
+.comments form input.btn {
+	width:100%;
+}

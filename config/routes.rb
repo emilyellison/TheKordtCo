@@ -6,8 +6,12 @@ TheKordtCo::Application.routes.draw do
   post '/sign_in'  => 'sessions#create'
   get  '/sign_out' => 'sessions#destroy', as: :sign_out
   
-  resources :blog_posts, except: [ :blog_posts ]
-  resources :videos, except: [ :index, :show ]
+  resources :blog_posts, except: [ :blog_posts ] do
+    resources :comments, only: [ :create, :destroy ]
+  end
+  resources :videos, except: [ :index, :show ] do
+    resources :comments, only: [ :create, :destroy ]
+  end
   resources :contents, only: [ :edit, :update ]
   resources :inquiries, only: [ :new, :create ]
   
