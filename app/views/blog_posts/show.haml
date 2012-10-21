@@ -3,4 +3,4 @@
 	- if @blog_post.display == false
 		%span.draft DRAFT
 = convert_to_markdown(@blog_post.content)
-= render 'comments/comments', item: @blog_post, item_comments: @blog_post.comments.approved, new_comment_url: blog_post_comments_url(blog_post_id: @blog_post.id)
+= render 'comments/comments', item_comments: @blog_post.comments.approved, new_comment_url: blog_post_comments_url(blog_post_id: @blog_post.id)

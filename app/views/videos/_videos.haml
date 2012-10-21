@@ -17,4 +17,4 @@
 %p.date
 	Posted on
 	= @video.updated_at.strftime('%B %e, %Y')
-= render 'comments/comments', item: @video, item_comments: @video.comments.approved, new_comment_url: video_comments_url(video_id: @video.id)
+= render 'comments/comments', item_comments: @video.comments.approved, new_comment_url: video_comments_url(video_id: @video.id)
