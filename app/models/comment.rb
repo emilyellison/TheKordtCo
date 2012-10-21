@@ -1,5 +1,5 @@
 class Comment < ActiveRecord::Base
-  attr_accessible :commentable_id, :commentable_type, :message, :name
+  attr_accessible :commentable_id, :commentable_type, :message, :name # :approve
   
   belongs_to :commentable, polymorphic: true
   
