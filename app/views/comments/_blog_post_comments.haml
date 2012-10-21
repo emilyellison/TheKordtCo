@@ -1,9 +1,9 @@
 .comments
 	%h2 Comments
-	- if @blog_post.comments.count == 0
+	- if @blog_post.comments.approved.count == 0
 		%p.no_comments There are no comments posted yet.
 	- else
-		- @blog_post.comments.each do |comment|
+		- @blog_post.comments.approved.each do |comment|
 			%p.commenter= comment.name
 			= convert_to_markdown(comment.message)
 			%p.date

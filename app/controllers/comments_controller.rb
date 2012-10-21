@@ -1,6 +1,11 @@
 class CommentsController < ApplicationController
   
-  before_filter :redirect_if_not_admin, only: [ :destroy ]
+  before_filter :redirect_if_not_admin, only: [ :manage, :update, :destroy ]
+  
+  def manage
+    @videos = Video.limit(100)
+    @blog_posts = BlogPost.limit(100)
+  end
   
   def create
     @commentable = find_commentable
@@ -11,6 +16,21 @@ class CommentsController < ApplicationController
     else  
       flash[:error] = 'Your comment must have your name and a message to be posted.'
       redirect_to :back  
+    end
+  end
+  
+  def update
+    @comment = Comment.find(params[:id])
+    @comment.approve = params[:approve]
+    if @comment.save
+      if params[:approve] == 'true'
+        flash[:success] = 'This comment has been approved.'
+      else 
+        flash[:success] = 'This comment has been unapproved.'
+      end
+      redirect_to :back
+    else
+      redirect_to :back
     end
   end
   

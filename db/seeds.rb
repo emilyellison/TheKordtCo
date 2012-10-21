@@ -10,6 +10,7 @@ User.destroy_all
 BlogPost.destroy_all
 Video.destroy_all
 Content.destroy_all
+Comment.destroy_all
 
 puts 'Old data destroyed.'
 
@@ -82,3 +83,24 @@ Content.create(page: 'Hire', element: 'Profile 3 Address', description: 'http://
 Content.create(page: 'Settings', element: 'Background', description: 'http://subtlepatterns.com/patterns/whitey.png')
 
 puts 'Content created.'
+
+blog_post_comments = [ 'Wow. Very powerful blog post.',
+                       'Ha! This one made me laugh.',
+                       'Great article. I\'m going to have to share this with a colleague of mine.',
+                       'Cool article. Reveals a part of the advertising world I didn\'t understand before.' ]
+
+BlogPost.all.each do |blog_post|
+  b = blog_post.comments.build(name: 'Emily Ellison', message: blog_post_comments.sample)   
+  b.save
+end
+
+video_comments = [ 'I love the way that you did the lighting on this one!',
+                   'Ha! This one made me laugh.',
+                   'Wow. Very powerful video.',
+                   'I need a video like this done for me!' ]
+
+Video.all.each do |video|
+  v = video.comments.build(name: 'Emily Ellison', message: video_comments.sample)   
+  v.save
+end
+

@@ -8,4 +8,6 @@ class Comment < ActiveRecord::Base
   validates :name, presence: true
   validates :message, presence: true
   
+  scope :approved, where(approve: true)
+  
 end

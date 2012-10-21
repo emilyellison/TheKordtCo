@@ -1,9 +1,9 @@
 .comments
 	%h2 Comments
-	- if @video.comments.count == 0
+	- if @video.comments.approved.count == 0
 		%p.no_comments There are no comments posted yet.
 	- else
-		- @video.comments.each do |comment|
+		- @video.comments.approved.each do |comment|
 			%p.commenter= comment.name
 			= convert_to_markdown(comment.message)
 			%p.date
