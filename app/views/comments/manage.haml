@@ -3,39 +3,9 @@
 - @videos.each do |video|
 	%h2= video.title
 	%br
-	%ul.content
-		- video.comments.each do |comment|
-			%li
-				%p.commenter= comment.name
-				= convert_to_markdown(comment.message)
-				%p.date
-					Written on 
-					= video.updated_at.strftime('%B %e, %Y')
-				%p
-					- if comment.approve?
-						= link_to 'Unapprove', video_comment_url(video_id: video.id, id: comment.id, approve: false), method: :put
-					- else
-						= link_to 'Approve', video_comment_url(video_id: video.id, id: comment.id, approve: true), method: :put
-					|
-					= link_to 'Delete', video_comment_url(video_id: video.id, id: comment.id), method: :delete, data: { confirm: 'Are you sure you would like to delete this comment?' }
-				%hr
+	= render 'comments/manage_comments', item: video, item_name: 'videos'
 %h1 Blog Posts
 - @blog_posts.each do |blog_post|
 	%h2= blog_post.title
 	%br
-	%ul.content
-		- blog_post.comments.each do |comment|
-			%li
-				%p.commenter= comment.name
-				= convert_to_markdown(comment.message)
-				%p.date
-					Written on 
-					= blog_post.updated_at.strftime('%B %e, %Y')
-				%p
-					- if comment.approve?
-						= link_to 'Unapprove', blog_post_comment_url(blog_post_id: blog_post.id, id: comment.id, approve: false), method: :put
-					- else
-						= link_to 'Approve', blog_post_comment_url(blog_post_id: blog_post.id, id: comment.id, approve: true), method: :put
-					|
-					= link_to 'Delete', blog_post_comment_url(blog_post_id: blog_post.id, id: comment.id), method: :delete, data: { confirm: 'Are you sure you would like to delete this comment?' }
-				%hr
+	= render 'comments/manage_comments', item: blog_post, item_name: 'blog_posts'
