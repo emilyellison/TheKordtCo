@@ -1,4 +1,4 @@
-class Music < ActiveRecord::Base
+class Track < ActiveRecord::Base
   attr_accessible :description, :display, :link, :title
   
   validates :title, presence: true
