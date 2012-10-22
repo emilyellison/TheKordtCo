@@ -12,10 +12,11 @@ TheKordtCo::Application.routes.draw do
   resources :videos, except: [ :index, :show ] do
     resources :comments, only: [ :create, :update, :destroy ]
   end
-  resources :tracks
+  resources :tracks, except: [ :index ]
   resources :contents, only: [ :edit, :update ]
   resources :inquiries, only: [ :new, :create ]
   
+  get '/musician' => 'tracks#index',    as: :tracks
   get '/writer'   => 'videos#writer',   as: :writer
   get '/director' => 'videos#director', as: :director
   get '/producer' => 'videos#producer', as: :producer
