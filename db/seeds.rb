@@ -9,6 +9,7 @@
 User.destroy_all
 BlogPost.destroy_all
 Video.destroy_all
+Track.destroy_all
 Content.destroy_all
 Comment.destroy_all
 
@@ -49,6 +50,11 @@ Video.create(title: 'Cute Kittens', link: 'http://vimeo.com/1053647', descriptio
 Video.create(title: 'Kittens Playing', link: 'http://vimeo.com/957065', description: description, writer: true, director: false, producer: true, display: true)
 
 puts 'Videos created.'
+
+Track.create(title: 'Fear on Fire', description: 'This is a track I\'ve been working on.', link: "<iframe width='100%' height='166' scrolling='no' frameborder='no' src='http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F38807074&show_artwork=true'></iframe>")
+Track.create(title: 'This land is your land', description: 'This is a track I\'ve been working on.', link: "<iframe width='100%' height='166' scrolling='no' frameborder='no' src='http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F25068274&show_artwork=true'></iframe>")
+
+puts 'Tracks created.'
 
 Content.create(page: 'The Kordt Co.', element: 'Top Text', description: '# Today, more people than ever are being tasked to create a video for their company or organization. Where do you start? Ask Kordt.')
 Content.create(page: 'The Kordt Co.', element: 'Picture 1', description: 'http://www.sxc.hu/pic/m/t/tp/tpacific/644739_studio_light.jpg')

@@ -2,10 +2,11 @@
 	- @tracks.each do |track|
 		%li
 			%p
-				= track.title
+				= link_to track.title, track_url(track)
 				- if track.display == false
 					%span.draft DRAFT
-			%p.date
+			= track.link.html_safe
+			%p.date.track
 				Posted on
 				= track.updated_at.strftime('%B %e, %Y')
 			%p

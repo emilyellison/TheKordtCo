@@ -1,0 +1,6 @@
+%h2= link_to @track.title, track_url(@track)
+= @track.link.html_safe
+= convert_to_markdown(@track.description)
+%p.date
+	Posted on
+	= @track.updated_at.strftime('%B %e, %Y')

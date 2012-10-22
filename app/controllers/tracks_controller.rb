@@ -28,6 +28,10 @@ class TracksController < ApplicationController
     @track = Track.find(params[:id])
   end
   
+  def show
+    @track = Track.find(params[:id])
+  end
+  
   def update
     @track = Track.find(params[:id])
     if @track.update_attributes(params[:track])

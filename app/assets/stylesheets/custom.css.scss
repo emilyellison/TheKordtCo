@@ -153,6 +153,11 @@ p.date {
 	font-weight:bold;
 	color:grey;
 }
+p.date.track {
+	padding:0px;
+	position:relative;
+	top:-10px;
+}
 p.edit_heading {
 	position:relative;
 	bottom:20px;

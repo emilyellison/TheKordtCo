@@ -12,7 +12,7 @@ TheKordtCo::Application.routes.draw do
   resources :videos, except: [ :index, :show ] do
     resources :comments, only: [ :create, :update, :destroy ]
   end
-  resources :tracks, except: [ :show ]
+  resources :tracks
   resources :contents, only: [ :edit, :update ]
   resources :inquiries, only: [ :new, :create ]
   
