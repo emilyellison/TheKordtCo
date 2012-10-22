@@ -1,0 +1,11 @@
+<% if @comment.commentable_type == 'Video' %>
+	<% item_name = 'video' %>
+	<% item = Video.find(@comment.commentable_id) %>
+<% elsif @comment.commentable_type == 'BlogPost' %>
+	<% item_name = 'blog post' %>
+	<% item = BlogPost.find(@comment.commentable_id) %>
+<% end %>
+<%= @comment.name %> submitted a comment for your <%= item_name %>, <%= item.title %>.
+Comment:
+<%= @comment.message %>
+To approve or delete this comment, <%= "<a href='http://thekordtco.herokuapp.com/sign_in'>sign in</a>".html_safe %> and visit <%= "<a href='http://thekordtco.herokuapp.com/manage_comments'>Comments</a>".html_safe %>.

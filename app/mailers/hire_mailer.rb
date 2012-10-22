@@ -5,4 +5,5 @@ class HireMailer < ActionMailer::Base
     @inquiry = inquiry
     mail(:from => inquiry.email, :subject => 'You have an e-mail from The Kordt Co.')
   end
+  
 end
