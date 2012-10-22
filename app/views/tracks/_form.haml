@@ -1,0 +1,16 @@
+.content_form
+	= render 'shared/error_messages', item: @track
+	= form_for @track do |f|
+		= f.label :title
+		= f.text_field :title
+		= f.label :link, 'Hyperlink (e.g. http://soundcloud.com/kordt/fearonfire)'
+		= f.text_field :link
+		= f.label :description
+		= f.text_area :description
+		= f.label :display, 'This track is ready for display.', class: 'inline'
+		= f.check_box :display, class: 'inline'
+		- if @track.new_record?
+			= f.submit 'Create Track', class: 'btn'
+		- else
+			= f.submit 'Update Track', class: 'btn'
+= render 'shared/markdown_instructions'

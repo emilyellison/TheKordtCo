@@ -1,0 +1,15 @@
+%ul.content
+	- @tracks.each do |track|
+		%li
+			%p
+				= track.title
+				- if track.display == false
+					%span.draft DRAFT
+			%p.date
+				Posted on
+				= track.updated_at.strftime('%B %e, %Y')
+			%p
+				= link_to 'Edit', edit_track_url(track)
+				|
+				= link_to 'Delete', track_url(track), method: :delete, data: { confirm: 'Are you sure you want to destroy this track?' }
+		%hr
