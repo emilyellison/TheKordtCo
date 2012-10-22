@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121021174641) do
+ActiveRecord::Schema.define(:version => 20121022182909) do
 
   create_table "blog_posts", :force => true do |t|
     t.string   "title"
@@ -45,6 +45,15 @@ ActiveRecord::Schema.define(:version => 20121021174641) do
     t.text     "message"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "musics", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "link"
+    t.boolean  "display",     :default => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
   end
 
   create_table "users", :force => true do |t|
