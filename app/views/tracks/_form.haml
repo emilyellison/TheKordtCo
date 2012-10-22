@@ -3,8 +3,8 @@
 	= form_for @track do |f|
 		= f.label :title
 		= f.text_field :title
-		= f.label :link, 'Hyperlink (e.g. http://soundcloud.com/kordt/fearonfire)'
-		= f.text_field :link
+		= f.label :link, 'Hyperlink (e.g. <iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F38807074& show_artwork=true"></iframe>)'
+		= f.text_area :link, rows: 5
 		= f.label :description
 		= f.text_area :description
 		= f.label :display, 'This track is ready for display.', class: 'inline'

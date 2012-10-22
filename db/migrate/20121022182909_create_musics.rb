@@ -3,7 +3,7 @@ class CreateMusics < ActiveRecord::Migration
     create_table :musics do |t|
       t.string :title
       t.text :description
-      t.string :link
+      t.text :link
       t.boolean :display, default: false
 
       t.timestamps

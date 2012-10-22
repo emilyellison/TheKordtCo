@@ -6,6 +6,7 @@
 			%li= link_to 'Writer', writer_url
 			%li= link_to 'Director', director_url
 			%li= link_to 'Producer', producer_url
+			%li= link_to 'Musician', tracks_url
 			%li= link_to 'Blogger', blog_posts_url
 			%li= link_to 'Hire', new_inquiry_url
 	- if @current_user.present? && @current_user.admin?
@@ -16,6 +17,7 @@
 				%ul.pull_right
 					%li= link_to 'Content', manage_content_url
 					%li= link_to 'Videos', manage_videos_url
+					%li= link_to 'Music', manage_tracks_url
 					%li= link_to 'Blog Posts', manage_blog_posts_url
 					%li= link_to 'Comments', manage_comments_url
 					%li= link_to 'Sign Out', sign_out_url

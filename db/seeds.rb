@@ -64,6 +64,7 @@ Is your subject technical? I've written videos on everything from insects that p
 Content.create(page: 'Writer', element: 'Heading', description: '# Kordt Writes')
 Content.create(page: 'Director', element: 'Heading', description: '# Kordt Directs')
 Content.create(page: 'Producer', element: 'Heading', description: '# Kordt Produces')
+Content.create(page: 'Musician', element: 'Heading', description: '# Kordt Rocks')
 Content.create(page: 'Blogger', element: 'Heading', description: '# Kordt Blogs')
 Content.create(page: 'Hire', element: 'Heading', description: '# Kordt Works')
 Content.create(page: 'Hire', element: 'Pitch', description: "If you are looking for fresh ideas, helpful planning and great scripting, the process can be simple. Tell me what's on your mind, and together, we can make your next video your best video.")
