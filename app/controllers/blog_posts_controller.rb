@@ -6,7 +6,7 @@ class BlogPostsController < ApplicationController
   end
   
   def index
-    if @current_user.present? && @current_user.admin == true
+    if current_user_is_admin
       @blog_posts = BlogPost.limit(100)
     else
       @blog_posts = BlogPost.ready_for_display.limit(100)

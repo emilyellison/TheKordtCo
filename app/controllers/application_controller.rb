@@ -4,9 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   before_filter :current_user
+  before_filter :current_user_is_admin
   before_filter :current_location
   
   helper_method :current_user
+  helper_method :current_user_is_admin
   
   def sign_in(user)
     session[:user_id] = user.id
@@ -19,6 +21,10 @@ class ApplicationController < ActionController::Base
   def current_location
     current_location_hash = request.path_parameters
     @current_location = current_location_hash[:controller] + '#' + current_location_hash[:action]
+  end
+  
+  def current_user_is_admin
+    @current_user.present? && @current_user.admin?
   end
   
   def redirect_if_not_signed_in

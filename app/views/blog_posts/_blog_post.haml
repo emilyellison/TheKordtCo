@@ -6,7 +6,7 @@
 %p.date
 	Written on 
 	= blog_post.updated_at.strftime('%B %e, %Y')
-- if @current_user.present? && @current_user.admin? && show_admin_links == true
+- if current_user_is_admin && show_admin_links == true
 	%p
 		= link_to 'Edit', edit_blog_post_url(blog_post)
 		|
