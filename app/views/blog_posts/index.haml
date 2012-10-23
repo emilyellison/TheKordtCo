@@ -1,2 +1,5 @@
 = convert_to_markdown(Content.description_for('Blogger', 'Heading'))
-= render 'blog_posts/blog_posts'
+%ul
+	- @blog_posts.each do |blog_post|
+		%li
+			= render 'blog_posts/blog_post', blog_post: blog_post, show_admin_links: false

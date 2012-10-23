@@ -1,9 +1,2 @@
-%h1
-	= @blog_post.title
-	- if @blog_post.display == false
-		%span.draft DRAFT
-= convert_to_markdown(@blog_post.content)
-%p.date
-	Written on 
-	= @blog_post.updated_at.strftime('%B %e, %Y')
+= render 'blog_posts/blog_post', blog_post: @blog_post, show_admin_links: false
 = render 'comments/comments', item_comments: @blog_post.comments.approved, new_comment_url: blog_post_comments_url(blog_post_id: @blog_post.id)
