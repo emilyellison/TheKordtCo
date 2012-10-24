@@ -1,4 +1,7 @@
 %h1 
 	Manage Tracks
 	= link_to '+ Track', new_track_url, class: 'btn'
-= render 'tracks/manage_tracks'
+%ul.content
+	- @tracks.each do |track|
+		%li
+			= render 'tracks/track', track: track, show_description: false, show_admin_links: true

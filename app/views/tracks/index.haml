@@ -1,2 +1,5 @@
 = convert_to_markdown(Content.description_for('Musician', 'Heading'))
-= render 'tracks/tracks', videos: @tracks
+%ul.content
+	- @tracks.each do |track|
+		%li
+			= render 'tracks/track', track: track, show_description: false, show_admin_links: false

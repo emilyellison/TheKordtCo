@@ -1,7 +1,0 @@
-- @tracks.each do |track|
-	%h2= link_to track.title, track_url(track)
-	= track.link.html_safe
-	%p.date.track
-		Posted on
-		= track.updated_at.strftime('%B %e, %Y')
-	%hr

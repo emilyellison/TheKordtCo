@@ -1,0 +1,13 @@
+%h2= link_to track.title, track_url(track)
+= track.link.html_safe
+- if show_description == true
+	= convert_to_markdown(track.description)
+%p.date
+	Posted on
+	= track.updated_at.strftime('%B %e, %Y')
+- if show_admin_links == true
+	%p
+		= link_to 'Edit', edit_track_url(track)
+		|
+		= link_to 'Delete', track_url(track), method: :delete, data: { confirm: 'Are you sure you want to destroy this track?' }
+%hr
