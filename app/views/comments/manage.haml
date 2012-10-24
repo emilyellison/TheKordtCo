@@ -1,11 +1,7 @@
 %h1 Manage Comments
 %h1 Videos
 - @videos.each do |video|
-	%h2= video.title
-	%br
 	= render 'comments/manage_comments', item: video, item_name: 'videos'
 %h1 Blog Posts
 - @blog_posts.each do |blog_post|
-	%h2= blog_post.title
-	%br
 	= render 'comments/manage_comments', item: blog_post, item_name: 'blog_posts'
