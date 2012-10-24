@@ -1,4 +1,4 @@
-%h2= link_to track.title, track_url(track)
+%h1= link_to track.title, track_url(track)
 = track.link.html_safe
 - if show_description == true
 	= convert_to_markdown(track.description)
