@@ -5,7 +5,7 @@
 %p.date
 	Posted on
 	= track.updated_at.strftime('%B %e, %Y')
-- if show_admin_links == true
+- if current_user_is_admin && show_admin_links == true
 	%p
 		= link_to 'Edit', edit_track_url(track)
 		|

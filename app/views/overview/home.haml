@@ -1,5 +1,4 @@
 = convert_to_markdown(Content.description_for('The Kordt Co.', 'Top Text'))
-= image_tag Content.description_for('The Kordt Co.', 'Picture 1'), size: '282x282', class: 'home_page_photo'
-= image_tag Content.description_for('The Kordt Co.', 'Picture 2'), size: '282x282', class: 'home_page_photo'
-= image_tag Content.description_for('The Kordt Co.', 'Picture 3'), size: '282x282', class: 'home_page_photo'
+- [ 'Picture 1', 'Picture 2', 'Picture 3' ].each do |picture|
+	= image_tag Content.description_for('The Kordt Co.', picture), size: '282x282', class: 'home_page_photo'
 = convert_to_markdown(Content.description_for('The Kordt Co.', 'Bottom Text'))

@@ -234,7 +234,7 @@ form input.btn:hover {
 .content_form input.inline {
 	width:auto;
 }
-.markdown_instructions {
+.form_instructions {
 	float:left;
 	border:1px solid grey;
 	padding:10px;
@@ -246,11 +246,11 @@ form input.btn:hover {
 	background:white;
 	box-shadow:0px 0px 2px black;
 }
-.markdown_instructions p {
+.form_instructions p {
 	font-size:16px;
 	padding:5px 0px;
 }
-.markdown_instructions h1, h2 {
+.form_instructions h1, h2 {
 	padding:3px 0px;
 }
 ul.content {

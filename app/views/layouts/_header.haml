@@ -9,7 +9,7 @@
 			%li= link_to 'Musician', tracks_url
 			%li= link_to 'Blogger', blog_posts_url
 			%li= link_to 'Hire', new_inquiry_url
-	- if @current_user.present? && @current_user.admin?
+	- if current_user_is_admin
 		.admin_wrapper
 			%nav.admin
 				%ul.pull_left
